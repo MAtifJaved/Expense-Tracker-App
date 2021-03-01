@@ -9,7 +9,7 @@ export const Balance = () => {
     it in Balance Component */
     /* Moreover JavaScript Number Function ".toFixed" is being used to fix the decimal places here  */
 
-    const amounts = transactions.map(transaction => transaction.amount);
+    const amounts = transactions.map(transaction => transaction.transactionAmount);
     const sum = amounts.reduce((accumulator,currentTransactionValue) => (accumulator += currentTransactionValue) , 0).toFixed(2); 
 
 

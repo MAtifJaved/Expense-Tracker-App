@@ -9,11 +9,11 @@ import AppReducer from './AppReducer';
 
 const initialState = {
   transactions: [
-       { id: 1, text: 'Flower', amount: -20 },
-       { id: 2, text: 'Salary', amount: 500  },
-       { id: 3, text: 'Book', amount: -1000  },
-       { id: 4, text: 'Camera', amount: 150  },
-       { id: 5, text: 'payment', amount: 182490  }
+       { id: 1, description: 'Flower', transactionAmount: -20 },
+       { id: 2, description: 'Salary', transactionAmount: 500  },
+       { id: 3, description: 'Book', transactionAmount: -1000  },
+       { id: 4, description: 'Camera', transactionAmount: 150  },
+       
     ] 
 }
 

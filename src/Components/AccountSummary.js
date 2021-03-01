@@ -5,17 +5,17 @@ import { GlobalContext } from '../Context/GlobalState'
 export const AccountSummary = () => {
     const { transactions } = useContext(GlobalContext);
 
-    const amounts = transactions.map(transaction => transaction.amount)
+    const amounts = transactions.map(transaction => transaction.transactionAmount)
 
     const income = amounts
     .filter(currentTransactionValue => currentTransactionValue > 0)
-    .reduce((sum,currentTransactionValue) => (sum += currentTransactionValue), 0 )
-    .toFixed(2)
+    .reduce((sum,currentTransactionValue) => (sum += currentTransactionValue),0)
+    .toFixed(2);
 
-    const expense =amounts
+    const expense =Math.abs(amounts
     .filter(currentTransactionValue => currentTransactionValue < 0)
-    .reduce((sum,currentTransactionValue) => (sum += currentTransactionValue * -1)  ,0)
-    .toFixed(2)
+    .reduce((sum,currentTransactionValue) => (sum += currentTransactionValue),0))
+    .toFixed(2);
 
     return (
         <div className="inc-exp-container">
