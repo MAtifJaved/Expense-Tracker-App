@@ -5,7 +5,7 @@ import React, { createContext, useReducer } from 'react'
 import AppReducer from './AppReducer';
 
 
-//creating the initial state
+/* creating the initial state
 
 const initialState = {
   transactions: [
@@ -15,8 +15,16 @@ const initialState = {
        { id: 4, description: 'Camera', transactionAmount: 150  },
        
     ] 
-}
+    }
+    These transactions were used before for taking the data but now these transactions has been mapped at
+    AddTransaction Component.
+    */
 
+//
+    // Creating Initial State
+const initialState = {
+    transactions: [ ] 
+  }
 //create the Global Context
 
 export const GlobalContext = createContext(initialState);
